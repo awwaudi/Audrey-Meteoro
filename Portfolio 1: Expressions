@@ -1,0 +1,49 @@
+# ============================================
+# Personal Budget Tracker
+# Created by: [Your Name]
+# Purpose:
+# This program helps users track their monthly
+# income, expenses, and remaining savings.
+# ============================================
+
+# Ask the user for their monthly income
+income = input("Enter your monthly income: ")
+income = float(income)   # convert string input to float
+
+# Ask the user for fixed expenses
+rent = input("Enter your rent expense: ")
+rent = float(rent)
+
+food = input("Enter your food expense: ")
+food = float(food)
+
+transportation = input("Enter your transportation expense: ")
+transportation = float(transportation)
+
+school = input("Enter your school expenses: ")
+school = float(school)
+
+entertainment = input("Enter your entertainment expense: ")
+entertainment = float(entertainment)
+
+# Calculate total expenses
+total_expenses = rent + food + transportation + school + entertainment
+
+# Calculate remaining budget
+remaining_budget = income - total_expenses
+
+# Calculate percentage of income spent
+percent_spent = (total_expenses / income) * 100
+
+# Display results
+print("\n====== MONTHLY BUDGET SUMMARY ======")
+print("Monthly Income: ", income)
+print("Total Expenses: ", total_expenses)
+print("Remaining Budget: ", remaining_budget)
+print("Percentage of Income Spent: ", percent_spent, "%")
+
+# Check if user overspent
+if remaining_budget < 0:
+    print("Warning: You spent more than your income!")
+else:
+    print("Good job! You are staying within your budget.")
