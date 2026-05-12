@@ -1,0 +1,36 @@
+# ============================================
+#            PERSONAL BUDGET TRACKER
+# ============================================
+
+print("============================================")
+print("         PERSONAL BUDGET TRACKER")
+print("============================================")
+
+# Ask the user for their monthly income
+income = input("Enter your monthly income: ")
+income = float(income)
+
+# Ask the user for expenses
+rent = float(input("Enter your rent expense: "))
+food = float(input("Enter your food expense: "))
+transportation = float(input("Enter your transportation expense: "))
+school = float(input("Enter your school expenses: "))
+entertainment = float(input("Enter your entertainment expense: "))
+
+# Calculations
+total_expenses = rent + food + transportation + school + entertainment
+remaining_budget = income - total_expenses
+percent_spent = (total_expenses / income) * 100
+
+# Output
+print("\n====== MONTHLY BUDGET SUMMARY ======")
+print("Monthly Income:", income)
+print("Total Expenses:", total_expenses)
+print("Remaining Budget:", remaining_budget)
+print("Percentage Spent:", percent_spent, "%")
+
+# Condition
+if remaining_budget < 0:
+    print("Warning: You overspent!")
+else:
+    print("Good job! You stayed within your budget.")
